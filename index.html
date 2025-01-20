@@ -9,6 +9,7 @@
   <meta name="author" content="Cashflow Алматы">
   <title>Cashflow Алматы — Игры "Денежный поток"</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fonts.css">
   <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -27,87 +28,83 @@
 </head>
 
 <body>
-    <header>
-        <h1>Cashflow Алматы</h1>
+  <header>
+    <h1>Cashflow Алматы</h1>
+    <p>Играйте в "Денежный поток", прокачивайте навыки управления финансами и встречайте единомышленников!</p>
+  </header>
 
-        <p>Прокачайте свои финансовые навыки и сделайте шаг к свободе!</p>
+  <nav>
+    <a href="#about">О проекте</a>
+    <a href="#schedule">Расписание</a>
+    <a href="#register">Запись</a>
+    <a href="#contact">Контакты</a>
+  </nav>
 
-    </header>
+  <section id="about">
+    <h2>О проекте</h2>
+    <p>Игра "Денежный поток" — это уникальная возможность изучить основы инвестирования, финансовой грамотности и стратегического мышления в увлекательной форме. 
+      Мы собираем людей, которые хотят научиться достигать своих финансовых целей, делиться опытом и получать новые идеи.</p>
+  </section>
 
-    <nav>
-        <a href="#about">О проекте</a>
-        <a href="#schedule">Расписание</a>
-        <a href="#register">Запись</a>
-        <a href="#contact">Контакты</a>
-    </nav>
+  <section id="schedule">
+    <h2>Расписание</h2>
+    <p>Наши игры проходят каждую неделю в уютной и дружелюбной атмосфере. Выбирайте удобное время и присоединяйтесь к нам:</p>
+    <ul>
+      <li><strong>Среда</strong> — 11:00</li>
+      <li><strong>Суббота</strong> — 11:00</li>
+    </ul>
+  </section>
 
-    <section id="about">
-
-        <h2>О проекте</h2>
-
-        <p>Мы проводим игры "Денежный поток" для развития финансовых навыков и новых знакомств.</p>
-
-    </section>
-
-    <section id="schedule">
-
-        <h2>Расписание</h2>
-
-        <ul>
-
-            <li>Среда — 11:00</li>
-
-            <li>Суббота — 11:00</li>
-
-        </ul>
-
-    </section>
-
-    <section id="register">
-
-        <h2>Запись на игру</h2>
-
+  <section id="register">
+    <h2>Запись на игру</h2>
+    <p>Заполните форму ниже, чтобы забронировать место на следующую игру. Мы свяжемся с вами для подтверждения записи.</p>
+    <!-- Кнопка открытия модального окна -->
+    <button id="open-modal">Записаться</button>
+    
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
         <form action="#" method="post">
-
-            <label for="name">Имя:</label>
-
-            <input type="text" id="name" name="name" required>
-
-            <label for="phone">Телефон:</label>
-
-            <input type="tel" id="phone" name="phone" required>
-
-            <label for="date">Дата:</label>
-
-            <select id="date" name="date" required>
-
-                <option value="wednesday">Среда — 11:00</option>
-
-                <option value="saturday">Суббота — 11:00</option>
-
-            </select>
-
-            <button type="submit">Записаться</button>
-
+          <h2>Запись на игру</h2>
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+                    
+          <fieldset>
+            <legend>Выберите удобное время:</legend>
+            <label>
+              <input type="radio" name="date" value="wed" required>
+              Среда 11:00
+            </label>
+            <br>
+            <label>
+              <input type="radio" name="date" value="sat" required>
+              Суббота 11:00
+            </label>
+        </fieldset>
+          <button type="submit">Записаться</button>
         </form>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <section id="contact">
+    <h2>Контакты</h2>
+    <p>Мы всегда готовы ответить на ваши вопросы. Свяжитесь с нами:</p>
+    <ul>
+      <li><strong>Телефон:</strong> +7 (705) 889-37-55</li>
+      <li><strong>Email:</strong> <a href="mailto:cashflow@example.com">cashflow@example.com</a></li>
+    </ul>
+  </section>
 
-    <section id="contact">
+  <footer>
+    <p>© 2025 Клуб Richmom. Все права защищены</p>
+  </footer>
 
-        <h2>Контакты</h2>
-
-        <p>Телефон: +7 (705) 889-37-55</p>
-
-        <p>Email: cashflow@example.com</p>
-
-    </section>
-
-    <footer>
-
-        <p>© 2025 Cashflow Алматы. Все права защищены.</p>
-
-    </footer>
+  <script src="script.js"></script>
 
 </body>
 

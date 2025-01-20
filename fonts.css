@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900; /* Поддерживает диапазон веса от 100 до 900 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular */
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold */
+}
+
+em {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic; /* Italic */
+}
