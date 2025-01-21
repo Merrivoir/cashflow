@@ -14,7 +14,7 @@ body {
   padding: 20px;
   background-color: #004d28;
   color: #fff;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,6 +22,7 @@ body {
   z-index: 1000;
   height: 120px; /* Начальная высота */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Добавление нижнего отступа */
 }
 
 .logo-container {
@@ -56,6 +57,7 @@ body {
 /* Уменьшенные стили при скролле */
 .header-scrolled {
   height: 40px !important; /* Уменьшенная высота */
+  margin-bottom: 10px; /* Отступ при прокрутке */
 }
 
 .header-scrolled .logo {
@@ -76,6 +78,7 @@ nav {
     background: #333;
     color: #fff;
     padding: 10px;
+    margin: 160px 0 20px;
 }
 
 nav a {
@@ -177,6 +180,7 @@ section {
 
 .about-content {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   gap: 20px;
@@ -340,11 +344,24 @@ form button:hover {
     flex-direction: column;
 }
 
-.close-button {
-  align-self: flex-end;
-  font-size: 40px;
-  line-height: 10px;
+.close-container {
+  align-self: end;
+  width: 30px;
+  height: 30px;
+  display: flex;
   cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.close-container:hover {
+  background-color: #ddd;
+}
+
+.close-button {
+  margin: auto;
+  font-size: 40px;
+  line-height: 0px;
 }
 
 form h2 {
