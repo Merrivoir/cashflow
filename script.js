@@ -19,3 +19,17 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+
+// Ожидание полной загрузки страницы
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.getElementById("main-header");
+
+  // Функция обработки скролла
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      header.classList.add("header-scrolled");
+    } else {
+      header.classList.remove("header-scrolled");
+    }
+  });
+});

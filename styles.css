@@ -6,11 +6,68 @@ body {
     color: #333;
 }
 
-header {
-    background: #004d28;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+/* Базовые стили для хедера */
+#main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #004d28;
+  color: #fff;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 120px; /* Начальная высота */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 80px; /* Начальная высота логотипа */
+  transition: all 0.3s ease;
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  flex: 1;
+  margin-left: 20px;
+}
+
+.header-text h1 {
+  font-size: 24px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-text p {
+  font-size: 16px;
+  margin: 5px 0 0;
+}
+
+/* Уменьшенные стили при скролле */
+.header-scrolled {
+  height: 40px !important; /* Уменьшенная высота */
+}
+
+.header-scrolled .logo {
+  height: 40px; /* Уменьшенная высота логотипа */
+}
+
+.header-scrolled .header-text h1,
+.header-scrolled .header-text p {
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 nav {
@@ -40,23 +97,155 @@ section {
 
 }
 
+/* Секция расписания */
+#activity {
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+#activity h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Карточки мероприятий */
+.event-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Адаптивная сетка */
+  gap: 20px;
+}
+
+.event-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.event-card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #007BFF; /* Акцентный цвет */
+}
+
+.event-card p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.event-card ul {
+  list-style: disc inside;
+  padding: 0;
+  color: #555;
+  margin: 0;
+}
+
+.event-card ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .event-cards {
+      grid-template-columns: 1fr; /* Одна колонка на маленьких экранах */
+  }
+}
+
+#about {
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-text h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #007BFF;
+}
+
+.about-text ul {
+  list-style: disc inside;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.about-photo {
+  flex: 0 0 300px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-why {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-why h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #007BFF;
+}
+
+.about-why ul {
+  list-style: disc inside;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.about-why p {
+  font-size: 16px;
+  color: #333;
+}
+
 footer {
     text-align: center;
     padding: 10px;
     background: #333;
     color: #fff;
-}
-
-/* Основной стиль модального окна */
-.modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Затемнение фона */
-    z-index: 1000;
 }
 
 /* Основные стили для формы */
@@ -119,6 +308,19 @@ form button {
 
 form button:hover {
     background-color: #0056b3;
+}
+
+/* Основной стиль модального окна */
+.modal {
+  display: none; /* Скрываем по умолчанию */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
 }
 
 /* Адаптивность */
