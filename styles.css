@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 1rem;
   background-color: #004d28;
   color: #fff;
   transition: all 0.2s ease;
@@ -20,9 +20,9 @@ body {
   left: 0;
   width: 100%;
   z-index: 1000;
-  height: 120px; /* Начальная высота */
+  height: 7rem; /* Начальная высота */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px; /* Добавление нижнего отступа */
+  margin-bottom: 1rem; /* Добавление нижнего отступа */
 }
 
 .logo-container {
@@ -50,14 +50,14 @@ body {
 }
 
 .header-text p {
-  font-size: 16px;
-  margin: 5px 0 0;
+  font-size: 1rem;
+  margin: 0.4rem 0 0;
 }
 
 /* Уменьшенные стили при скролле */
 .header-scrolled {
-  height: 40px !important; /* Уменьшенная высота */
-  margin-bottom: 10px; /* Отступ при прокрутке */
+  height: 4rem !important; /* Уменьшенная высота */
+  margin-bottom: 0.5rem; /* Отступ при прокрутке */
 }
 
 .header-scrolled .logo {
@@ -78,7 +78,7 @@ nav {
     background: #333;
     color: #fff;
     padding: 10px;
-    margin: 160px 0 20px;
+    margin: 7rem 0 1rem;
 }
 
 nav a {
